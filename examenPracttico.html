@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Examen Practico</title>
+</head>
+<body>
+<script>
+
+
+  var numero1 = 5;
+  var numero2 = 8;
+
+  SalidaConsola (numero1,numero2);
+
+  function SalidaConsola (numero1,numero2)
+  {
+
+   if (numero1 > numero2)
+	{
+		console.log("numero1 no es mayor que numero2");
+	}
+
+	  var entero = ValidarEntero(numero2);
+	  if(entero == true)
+      {
+          console.log("numero2 es positivo");
+      }
+
+      entero = ValidarEntero (numero1);
+      if(entero == false)
+      {
+      console.log("numero1 es negativo o distinto de cero");
+      }
+      else if(entero == true)
+      {
+      console.log("numero1 es positivo o distinto de cero");
+      }
+
+
+	  var numerosumado = numero1 + 1;
+      if(numerosumado >= numero2)
+      {
+          console.log("Incrementar en 1 unidad el valor de numero1 no lo hace mayor o igual que numero2");
+      }
+
+  }
+
+  function ValidarEntero (numero)
+   {
+		if (Number.isInteger(numero))
+		{
+		  return true;
+		}
+		else
+		if(!Number.isInteger(numero))
+		{
+		return false;
+		}
+	}
+
+   var nfactorial = prompt("Introduce un numero");
+   CalcularFactorial (nfactorial);
+   function CalcularFactorial (nfactorial)
+   {
+     let factorial = factorial (nfactorial);
+     console.log ("El factorial del numero: " + nfactorial + " es: " + factorial);
+   }
+
+	function factorial (n)
+	{
+	let factorial = 1;
+	for (i=1; i<=n; i++) {
+		factorial = factorial * i;
+	}
+	return factorial;
+}
+
+
+var numero = prompt("Introduce un numero entero");
+
+var resultado = parImpar(numero);
+console.log ("El numero: " + numero + " es: " + resultado);
+
+function parImpar(numero) {
+	if(numero % 2 == 0) {
+		return "par";
+	}
+	else {
+		return "impar";
+	}
+}
+
+
+
+
+  </script>
+
+</body>
+</html>
