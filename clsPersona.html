@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase Persona</title>
+</head>
+<body>
+<script>
+  class clsPersona {
+
+  constructor (nombre, apellido,edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+  }
+  
+  //getter
+  get Detalles()
+  {
+	return this.getDetalles();
+  }
+
+  // Método
+  getDetalles() {
+	var detPersona =  "El nombre de la persona es: " + this.nombre.toUpperCase() + ", el apellido es: " + this.apellido.toUpperCase() + " y la edad es: " + this.edad;
+	return detPersona;
+	
+  }
+}
+const persona = new clsPersona('andres','acevedo','33');
+console.log(persona.Detalles);
+
+</script>
+</body>
+</html>

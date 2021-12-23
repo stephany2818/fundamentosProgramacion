@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase Jugador</title>
+</head>
+<body>
+<script>
+class clsPersona {
+
+  constructor (nombre, apellido,edad) {
+    this.nombre = nombre;
+    this.apellido = apellido;
+    this.edad = edad;
+  }
+  
+  //getter
+  get Detalles()
+  {
+	return this.getDetalles();
+  }
+
+  // Método
+  getDetalles() {
+	var detPersona =  "El nombre de la persona es: " + this.nombre.toUpperCase() + ", el apellido es: " + this.apellido.toUpperCase() + " y la edad es: " + this.edad;
+	return detPersona;
+	
+  }
+}
+const persona = new clsPersona('andres','acevedo','33');
+console.log(persona.Detalles);
+
+class clsJugador extends clsPersona {
+
+ constructor (nombre, apellido, posicion) {
+	super();
+	this.nombre = nombre;
+	this.apellido = apellido;
+    this.posicion = posicion;
+  }
+
+  getDetallesJugador() {
+	var detPersona =  "El nombre de la persona es: " + this.nombre.toUpperCase() + ", el apellido es: " + this.apellido.toUpperCase() + " y la posición es: " + this.posicion.toUpperCase();
+    return detPersona;
+  }
+    get detallesJugador()
+  {
+    //super.Detalles();
+	return this.getDetallesJugador();
+  }
+}
+    const jugador = new clsJugador('andres','acevedo','arquero');
+    console.log(jugador.detallesJugador);
+</script>
+</body>
+</html>
