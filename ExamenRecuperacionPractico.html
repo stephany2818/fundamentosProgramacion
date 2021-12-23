@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Examen Recuperación Practico Bancolombia</title>
+</head>
+<body>
+<script>
+/*
+// Ejercicio # 1 
+
+  function getRandom()
+  {
+  var randomNum = Math.floor((Math.random() * 100) + 1);
+  return randomNum
+  }
+
+ var numero = getRandom();
+
+   var resultado = parImPar(numero);
+
+function parImPar(numero) {
+	if((numero) % 2 == 0) {
+		return "par";
+	}
+	else {
+		return "impar";
+	}
+}
+
+console.log ("El numero: " + numero + " es: " + resultado);
+
+
+//Ejercicio # 2 
+var numero = prompt("Introduce un numero a validar");
+var multiplo = prompt("Introduce un numero multiplo");
+if ((numero >= 1) && (numero < 100)){
+
+	if(( numero % multiplo ) == 0){
+
+		console.log( "El numero:" + numero + " es multiplo de " + multiplo);
+		
+	}else{
+
+		console.log("El numero:" + numero + " NO es multiplo de " + multiplo);
+
+	}
+}
+*/
+
+//Ejercicio #3 
+var cadena = prompt("Introduce la frase:");
+var caracter =  prompt("Introduce el caracter para la búsqueda:");
+var resultado =  cuantasVecesAparece(cadena,caracter); 
+
+console.log ("La cantidad de veces que se muestra el caracter " + caracter + " es: " + resultado);
+
+function cuantasVecesAparece(cadena, caracter){
+  var indices = [];
+  for(var i = 0; i < cadena.length; i++) {
+    if (cadena[i].toLowerCase() === caracter) indices.push(i);
+  }
+	return indices.length;
+}
+
+//Ejercicio #4 
+
+</script>
+</body>
+</html> 
